@@ -82,7 +82,7 @@ I'm a **Computer Science student specializing in Data Science** at Albukhary Int
         <a href="https://github.com/AR-Kamal/NLP-text-sentiment">
           <img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
         </a>
-        <a href="https://amazon-sentiment-analyst.streamlit.app/">
+        <a href="https://nlp-text-sentiment-n6tsd5shwofqsvksyjuivb.streamlit.app/">
           <img src="https://img.shields.io/badge/Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
         </a>
       </p>
