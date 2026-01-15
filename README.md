@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Abdul Rahman Kamal 👋</h1>
+<h1 align="center">Hi, I'm Abdul Rahman Kamal</h1>
 
 <p align="center">
   <strong>Data Science Student | Machine Learning Enthusiast | Full-Stack Developer</strong>
@@ -15,18 +15,17 @@
 
 ---
 
-### 🚀 About Me
+### About Me
 
 I'm a **Computer Science student specializing in Data Science** at Albukhary International University, Malaysia. I'm passionate about transforming raw data into actionable insights and building intelligent applications that solve real-world problems.
 
-- 🔭 Currently working on **AI-powered tourism planning applications**
-- 🌱 Learning **Generative AI, RAG, and Cloud Technologies**
-- 🎯 Seeking a **6-month Data Analyst / Software Engineering internship starting March 2026**
-- 💡 Interested in **Machine Learning, NLP, and Data Visualization**
+- Currently working on **Smart tourism planning applications**
+- Learning **Generative AI, RAG, and Cloud Technologies**
+- Interested in **Data Analyst, Machine Learning, NLP, and Data Visualization**
 
 ---
 
-### 🛠️ Tech Stack
+### Tech Stack
 
 **Languages**
 
@@ -72,7 +71,7 @@ I'm a **Computer Science student specializing in Data Science** at Albukhary Int
 
 ---
 
-### 📌 Featured Projects
+### Featured Projects
 
 <table>
   <tr>
@@ -95,42 +94,28 @@ I'm a **Computer Science student specializing in Data Science** at Albukhary Int
           <img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
         </a>
       </p>
-      <p align="center">Cross-platform mobile app generating personalized travel itineraries. Approved for pilot by Kedah Tourism Council.</p>
+      <p align="center">Cross-platform app generating personalized travel itineraries. Approved for pilot by Kedah Tourism Council.</p>
     </td>
   </tr>
 </table>
 
 ---
 
-### 📜 Certifications
+### Certifications
 
 - **Data Analyst Certification** — DataCamp
 - **Data Scientist Certification** — DataCamp
 - **Data Engineer in Python Certification** — DataCamp
 
----
-
-### 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AR-Kamal&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AR-Kamal&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165"/>
-</p>
 
 ---
 
-### 🤝 Let's Connect
+### Let's Connect
 
-I'm actively seeking internship opportunities in **Data Analytics** and **Software Engineering**. If you'd like to collaborate or discuss opportunities, feel free to reach out!
+I'm actively working on Data Science related project as my main focus, but i have a side hobby projects related to AI and Game Development
 
 <p align="center">
   <a href="https://www.linkedin.com/in/ar-kamal">
     <img src="https://img.shields.io/badge/Let's_Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-</p>
-
----
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=AR-Kamal&color=blue&style=flat-square&label=Profile+Views" alt="Profile Views"/>
 </p>
