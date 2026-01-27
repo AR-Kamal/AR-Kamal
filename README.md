@@ -19,9 +19,9 @@
 
 I'm a **Computer Science student specializing in Data Science** at Albukhary International University, Malaysia. I'm passionate about transforming raw data into actionable insights and building intelligent applications that solve real-world problems.
 
-- Currently working on **Smart tourism planning applications**
-- Learning **Generative AI, RAG, and Cloud Technologies**
-- Interested in **Data Analyst, Machine Learning, NLP, and Data Visualization**
+- Currently working on **Neural Network Quantization with Rust**
+- Learning **Generative AI, RAG, and NNL**
+- Interested in **Data Analyst, Machine Learning, NNL, NLP, and Data Visualization**
 
 ---
 
