@@ -80,18 +80,6 @@ I'm a **Computer Science student specializing in Data Science** at Albukhary Int
 <table>
   <tr>
     <td width="50%">
-      <h3 align="center">Sentiment Analysis - Amazon Reviews</h3>
-      <p align="center">
-        <a href="https://github.com/AR-Kamal/NLP-text-sentiment">
-          <img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
-        </a>
-        <a href="https://nlp-text-sentiment-n6tsd5shwofqsvksyjuivb.streamlit.app/">
-          <img src="https://img.shields.io/badge/Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
-        </a>
-      </p>
-      <p align="center">NLP pipeline classifying 171K+ reviews with 90.95% accuracy using SVM. Deployed with Streamlit.</p>
-    </td>
-    <td width="50%">
       <h3 align="center">MaiKedah - Smart Tourism Planner</h3>
       <p align="center">
         <a href="https://github.com/AR-Kamal/AI-TravelPlanner">
