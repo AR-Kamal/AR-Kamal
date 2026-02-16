@@ -79,7 +79,7 @@ I'm a **Computer Science student specializing in Data Science** at Albukhary Int
 
 <table>
   <tr>
-    <td width="50%">
+    <td width="100%">
       <h3 align="center">MaiKedah - Smart Tourism Planner</h3>
       <p align="center">
         <a href="https://github.com/AR-Kamal/AI-TravelPlanner">
