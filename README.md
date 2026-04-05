@@ -1,100 +1,169 @@
-<h1 align="center">Hi, I'm Abdul Rahman Kamal</h1>
+<div align="center">
 
-<p align="center">
-  <strong>Data Science Student | Machine Learning Enthusiast | Full-Stack Developer</strong>
-</p>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=1&section=header"/>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/ar-kamal">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="mailto:abdulrahmandev141@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-</p>
+# Abdul Rahman Kamal
+
+**Data Scientist · ML Systems Engineer · Rust Developer**
+
+[![Crates.io](https://img.shields.io/crates/v/quantize-rs?style=flat-square&logo=rust&logoColor=white&label=crates.io&color=e43717)](https://crates.io/crates/quantize-rs)
+[![Docs.rs](https://img.shields.io/docsrs/quantize-rs?style=flat-square&logo=docs.rs&logoColor=white&label=docs)](https://docs.rs/quantize-rs)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ar-kamal)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:abdulrahmandev141@gmail.com)
+
+</div>
 
 ---
 
-### About Me
+### About
 
-I'm a **Computer Science student specializing in Data Science** at Albukhary International University, Malaysia. I'm passionate about transforming raw data into actionable insights and building intelligent applications that solve real-world problems.
+Computer Science student specializing in Data Science at Albukhary International University, Malaysia. I build production-grade ML tooling and data-driven applications. Published crate author on [crates.io](https://crates.io/crates/quantize-rs).
 
-- Currently working on **Neural Network Quantization with Rust**
-- Learning **Generative AI, RAG, and NNL**
-- Interested in **Data Analyst, Machine Learning, NNL, NLP, and Data Visualization**
+```rust
+impl Engineer {
+    pub fn focus(&self) -> Vec<&str> {
+        vec![
+            "Neural Network Quantization — INT8/INT4 compression in pure Rust",
+            "Machine Learning & Deep Learning pipelines",
+            "Natural Language Processing, RAG, and AI Agents",
+            "Full-stack development with React, Next.js, and TypeScript",
+        ]
+    }
+}
+```
+
+**Certifications** — DataCamp Data Analyst · DataCamp Data Scientist · DataCamp Data Engineer (Python)
+
+---
+
+### Flagship — quantize-rs
+
+> Production-grade neural network quantization toolkit in pure Rust.
+> Compress ONNX models up to **8x** with minimal accuracy loss. Zero Python dependency.
+
+[![View Repository](https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/AR-Kamal/quantize-rs)
+[![crates.io](https://img.shields.io/crates/v/quantize-rs.svg?style=flat-square&color=e43717)](https://crates.io/crates/quantize-rs)
+[![Downloads](https://img.shields.io/crates/d/quantize-rs.svg?style=flat-square&color=4cc61e)](https://crates.io/crates/quantize-rs)
+
+```
+  ┌──────────────┐       ┌─────────────────────────────┐       ┌──────────────┐
+  │  ONNX Model  │       │      quantize-rs Engine      │       │  Compressed  │
+  │  Float32     │──────▶│                               │──────▶│  Model       │
+  │  44.65 MB    │       │  Per-Tensor / Per-Channel     │       │  5.60 MB     │
+  └──────────────┘       │  INT8 (4x) / INT4 (8x)       │       └──────────────┘
+                         │  Calibration: MinMax,         │
+                         │  Percentile, Entropy, MSE     │
+                         │  INT4 Bit Packing (2 vals/B)  │
+                         └─────────────────────────────┘
+```
+
+**ResNet-18 Results**
+
+| Method | Size | Compression | MSE | Accuracy Retained |
+|:---|:---:|:---:|:---:|:---:|
+| Original (Float32) | 44.65 MB | 1.0x | — | Baseline |
+| INT8 Per-Tensor | 11.18 MB | 4.0x | 0.000003 | 99.9% |
+| INT8 Per-Channel | 11.18 MB | 4.0x | 0.000002 | 99.9% |
+| INT4 Per-Tensor | 5.60 MB | 8.0x | 0.000907 | 90.9% |
+| INT4 Per-Channel | 5.60 MB | 8.0x | 0.000862 | 91.4% |
+
+**Architecture**
+
+```
+  ┌───────────────────────────────────────────────────────────────┐
+  │                        CLI Interface                          │
+  ├──────────┬───────────┬──────────┬───────────┬────────────────┤
+  │ quantize │ calibrate │ validate │ benchmark │ batch / config │
+  ├──────────┴───────────┴──────────┴───────────┴────────────────┤
+  │                        Core Engine                            │
+  │                                                               │
+  │  Per-Tensor Quantization    Per-Channel Quantization          │
+  │  scale = (max-min)/255      Per-output-channel scale/zp       │
+  │                             40-60% lower error on Conv layers │
+  │                                                               │
+  │  INT4 Bit Packing           Calibration Framework             │
+  │  [AAAA BBBB] = 2 vals/byte  MinMax · Percentile · Entropy    │
+  │  True 8x compression        MSE · Statistical optimization   │
+  ├───────────────────────────────────────────────────────────────┤
+  │                      ONNX Model I/O                           │
+  │             PyTorch · TensorFlow · ONNX Runtime               │
+  └───────────────────────────────────────────────────────────────┘
+```
+
+```bash
+cargo install quantize-rs
+quantize-rs quantize model.onnx -o model_int4.onnx --bits 4 --per-channel
+```
+
+---
+
+### Other Projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**MaiKedah — Smart Tourism Planner**
+
+Cross-platform AI travel planner generating personalized itineraries for Kedah, Malaysia. Approved for pilot deployment by Kedah Tourism Council (MBAS).
+
+`React Native` `Expo` `TypeScript` `Next.js 14` `Google Gemini` `PostgreSQL` `Supabase` `Google Maps`
+
+[![Repository](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/AR-Kamal/AI-TravelPlanner)
+
+</td>
+<td width="50%" valign="top">
+
+**NLP Text Sentiment**
+
+Text classification and sentiment analysis pipeline implementing multiple ML algorithms with TF-IDF and BoW feature engineering.
+
+`Python` `Scikit-learn` `NLTK` `spaCy` `TF-IDF` `Naive Bayes` `SVM` `Logistic Regression`
+
+[![Repository](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/AR-Kamal/NLP-text-sentiment)
+
+</td>
+</tr>
+</table>
 
 ---
 
 ### Tech Stack
 
-**Languages**
+**Languages** · Rust · Python · TypeScript · JavaScript · SQL
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-DEA584?style=flat-square&logo=rust&logoColor=black)
+**ML / Data** · TensorFlow · Keras · Scikit-learn · Pandas · NumPy · ONNX
 
+**Visualization** · Tableau · Power BI · Matplotlib · Seaborn
 
-**Data & Machine Learning**
+**Databases** · PostgreSQL · MySQL · MongoDB · Supabase
 
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-
-**Visualization**
-
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=flat-square&logo=python&logoColor=white)
-
-**Databases**
-
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-
-**Development**
-
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-
-**Tools**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-![Cargo](https://img.shields.io/badge/Cargo-000000?style=flat-square&logo=rust&logoColor=white)
-![Crates.io](https://img.shields.io/badge/Crates.io-000000?style=flat-square&logo=rust&logoColor=white)
+**Development** · React · Next.js · Node.js · Docker · Git · Cargo
 
 ---
 
-### Featured Projects
+### Stats
 
-<table>
-  <tr>
-    <td width="100%">
-      <h3 align="center">MaiKedah - Smart Tourism Planner</h3>
-      <p align="center">
-        <a href="https://github.com/AR-Kamal/AI-TravelPlanner">
-          <img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
-        </a>
-      </p>
-      <p align="center">Cross-platform app generating personalized travel itineraries. Approved for pilot by Kedah Tourism Council.</p>
-    </td>
-  </tr>
-</table>
+<div align="center">
+
+<img height="170em" src="https://github-readme-stats.vercel.app/api?username=AR-Kamal&show_icons=true&theme=github_dark&border_color=30363d&bg_color=0d1117&title_color=c9d1d9&text_color=8b949e&icon_color=58a6ff&include_all_commits=true&count_private=true&hide_border=false"/>
+&nbsp;
+<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AR-Kamal&layout=compact&theme=github_dark&border_color=30363d&bg_color=0d1117&title_color=c9d1d9&text_color=8b949e&langs_count=8&hide_border=false"/>
+
+<br/><br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com?user=AR-Kamal&theme=github-dark-blue&border=30363d&background=0d1117&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakLabel=8b949e&sideLabels=8b949e&dates=8b949e&currStreakNum=c9d1d9&sideNums=c9d1d9" />
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=AR-Kamal&bg_color=0d1117&color=8b949e&line=58a6ff&point=c9d1d9&area_color=1f6feb&area=true&hide_border=true&custom_title=Contribution%20Activity" width="95%"/>
+
+</div>
 
 ---
 
-### Certifications
+<div align="center">
 
-- **Data Analyst Certification** — DataCamp
-- **Data Scientist Certification** — DataCamp
-- **Data Engineer in Python Certification** — DataCamp
+<sub>Open to collaboration on ML tooling, quantization research, and systems-level AI projects.</sub>
+
+</div>
